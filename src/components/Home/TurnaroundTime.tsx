@@ -55,7 +55,7 @@ export default function TurnaroundTime({page}: {page?: string}) {
                     {features.map((feature, index) => (
                         <div key={index} className="max-[600px]:flex-col max-[600px]:items-center flex items-start gap-4 min-[1065px]:col-span-1 min-[1065px]:max-w-[600px]">
                             <div className="flex-shrink-0">
-                                <img src={feature.icon} alt={feature.title} className={`${index === 0 && page==="home"  && "max-[600px]:w-[100px] max-[600px]:h-[100px]"}  ${index!==0 && page==="home" && "max-[600px]:w-[130px] max-[600px]:h-[130px]"} ${page==="about-us" && index !== 0 && "w-[110px] h-[110px]"} ${page==="about-us" && index === 0 && "w-[100px] h-[100px]"}`} />
+                                <img src={feature.icon} alt={feature.title} className={`${index === 0 && page==="home"  && "max-[600px]:w-[100px] max-[600px]:h-[100px] w-[70px] h-[70px]"}  ${index!==0 && page==="home" && "max-[600px]:w-[130px] max-[600px]:h-[130px] w-[80px] h-[80px]"} ${page==="about-us" && index !== 0 && "w-[110px] h-[110px]"} ${page==="about-us" && index === 0 && "w-[100px] h-[100px]"}`} />
 
 
                             </div>
