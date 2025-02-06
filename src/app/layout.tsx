@@ -37,6 +37,9 @@ export default function RootLayout({
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      scrollToTop();
+    }, 1000)
     if (
       pathname === "/concrete-estimating" ||
       pathname === "/masonry-estimating" ||
@@ -68,7 +71,7 @@ export default function RootLayout({
   }, [pathname])
 
   useEffect(() => {
-    scrollToTop();
+    
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400)
     }
