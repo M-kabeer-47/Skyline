@@ -38,8 +38,8 @@ export default function RootLayout({
 
   useEffect(() => {
     setTimeout(() => {
-      scrollToTop();
-    }, 1000)
+      scrollToTop
+    }, 500)
     if (
       pathname === "/concrete-estimating" ||
       pathname === "/masonry-estimating" ||
