@@ -1,15 +1,43 @@
 import Carousel from "@/components/ui/Carousel"
 import { Button } from "@/components/ui/button"
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
-import { useRouter } from "next/navigation";
+import {  usePathname, useRouter } from "next/navigation";
   export default function Page({ images, pathTitle, path }: { images: string[], pathTitle: string, path: string }) {
   const [categories, setCategories] = useState<string[]>([]);
   const router = useRouter();
+  const pathname = usePathname();
+  
+  useLayoutEffect(() => {
+    const scrollToTop = () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      document.documentElement.style.scrollBehavior = '';
+    };
+
+    requestAnimationFrame(scrollToTop);
+  }, [pathname]);
+
+  // Prevent scroll restoration
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.history.scrollRestoration = 'manual';
+      return () => {
+        window.history.scrollRestoration = 'auto';
+      };
+    }
+  }, []);
 
+  // Add CSS stabilization
+  useEffect(() => {
+    document.documentElement.style.overflowAnchor = 'none';
+    return () => {
+      document.documentElement.style.overflowAnchor = 'auto';
+    };
+  }, []);
+  
 
-    
+  useEffect(() => {  
     if(path === "services") {
       setCategories(["Cost Estimating", "Commercial Estimating", "Residential Estimating", "Industrial Estimating", "Construction Estimating", "Construction Estimating Consultants"]);
     }
@@ -19,7 +47,7 @@ import { useRouter } from "next/navigation";
     }
   }, [path]);
   return (
-    <div className="px-[4%] lg:px-[10%] mb-[150px]">
+    <div className="px-[4%] lg:px-[10%] mb-[150px] ">
       <div className="flex items-center gap-2 mb-4 md:mb-6 text-md mt-[50px]">
 
         <span className="text-primary hover:underline cursor-pointer">Skyline Estimator</span>
@@ -28,10 +56,10 @@ import { useRouter } from "next/navigation";
       </div>
 
 
-      <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-2">
+      <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-2 ">
         {/* Left Categories */}
         <div className="lg:w-[400px] space-y-4 lg:top-[50px]">
-          <h2 className="text-xl md:text-2xl font-bold mb-6">{path !=="" && path[0].toUpperCase() + path.slice(1)} Category</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 text-dark-blue">{path !=="" && path[0].toUpperCase() + path.slice(1)} Category</h2>
           <div className="space-y-4  h-full">
             {categories.length > 0 ? (
               categories.map((service) => (

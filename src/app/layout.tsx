@@ -37,9 +37,7 @@ export default function RootLayout({
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
-    setTimeout(() => {
-      scrollToTop
-    }, 500)
+    
     if (
       pathname === "/concrete-estimating" ||
       pathname === "/masonry-estimating" ||
@@ -67,6 +65,7 @@ export default function RootLayout({
       setPath("services")
     } else {
       setImages([])
+      
     }
   }, [pathname])
 
@@ -81,7 +80,10 @@ export default function RootLayout({
   }, [])
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
   }
 
   function toTitleCase(str: string) {
@@ -108,6 +110,7 @@ export default function RootLayout({
           <div className="relative top-[140px]">
             <Background text={toTitleCase(pathname.replace("/", "").replace("-", " "))} />
             {pathname !== "/contact-us" ? (
+              
               <Categories
                 images={images}
                 pathTitle={toTitleCase(pathname.replace("/", "").replace("-", " "))}

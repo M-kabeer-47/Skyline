@@ -116,46 +116,65 @@ export default function Navbar() {
               <div className="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 top-[60px] left-0 w-48 bg-accent shadow-lg transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 z-50">
                 <ul className="py-2">
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/cost-estimating">Cost Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/cost-estimating")
+                    }}>
+                    Cost Estimating
                   </li>
                   <li
 
 
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/residential-estimating">Residential Estimating</Link>
+
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/residential-estimating")
+                    }}>
+                    Residential Estimating
                   
                     
+
                   </li>
 
 
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer"
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/commercial-estimating")
+                    }}>
+                    Commercial Estimating
+                  </li>
+
+
+
+                  <li
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                        router.push("/industrial-estimating")
+                    }}>
+
+
                     
-                  >
-                    <Link href="/commercial-estimating">Commercial Estimating</Link>
-                  </li>
+                  
+                    Industrial Estimating
 
-
-                  <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer"
-                    
-                  >
-                    <Link href="/industrial-estimating">Industrial Estimating</Link>
 
                   </li>
 
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/construction-estimating">Construction Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/construction-estimating")
+                    }}>
+
+                    Construction Estimating
 
                   </li>
 
 
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                        router.push("/construction-estimating-consultants")
+                    }}>
 
-                    <Link href="/construction-estimating-consultants">Construction Estimating Consultants</Link>
+
+                    Construction Estimating Consultants
+
 
                   </li>
                 </ul>
@@ -168,36 +187,55 @@ export default function Navbar() {
               <div className="absolute invisible group-hover:visible opacity-0 group-hover:opacity-100 top-[60px] left-0 w-48 bg-accent shadow-lg transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 z-50">
                 <ul className="py-2">
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/concrete-estimating">Concrete Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/concrete-estimating")
+                    }}>
+                    Concrete Estimating
                   </li>
 
-                  <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-
-                    <Link href="/lumber-takeoff">Lumber Takeoff</Link>
-                  </li>
-                  <li
-
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/sitework-estimating">Sitework Estimating</Link>
-                  </li>
 
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-
-                    <Link href="/electrical-estimating">Electrical Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/lumber-takeoff")
+                    }}>
+                    Lumber Takeoff
                   </li>
                   <li
 
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
 
-                    <Link href="/masonry-estimating">Masonry Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/sitework-estimating")
+                    }}>
+                    Sitework Estimating
+                  </li>
+
+
+                  <li
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/electrical-estimating")
+                    }}>
+                        Electrical Estimating
+                  </li>
+                  <li
+
+
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{
+                      router.push("/masonry-estimating")
+                    }}>
+
+
+                    Masonry Estimating
+
 
                   </li>
                   <li
-                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer">
-                    <Link href="/metal-estimating">Metal Estimating</Link>
+                    className="px-4 py-2 text-white hover:text-dark-blue transition-colors duration-200 cursor-pointer" onClick={()=>{  
+                      router.push("/metal-estimating")
+                    }}>
+
+
+                    Metal Estimating
+
 
                   </li>
                 </ul>
