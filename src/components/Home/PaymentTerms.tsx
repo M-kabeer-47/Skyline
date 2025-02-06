@@ -51,7 +51,7 @@ export default function PaymentTerms() {
 
 
 
-        <div className="grid min-[1065px]:grid-cols-2 items-start gap-[2%]">
+        <div className="grid min-[1065px]:grid-cols-2 items-start gap-[2%] max-[650px]:gap-[1%]">
           {/* Left Column - Accordion */}
           <div className="relative w-full h-full" >
           <WorldMap />
@@ -60,7 +60,7 @@ export default function PaymentTerms() {
           
 
           {/* Right Column - Images */}
-          <div className="space-y-4 max-[1065px]:left-[-30px] relative">
+          <div className="space-y-4 max-[1065px]:left-[-30px] relative max-[650px]:relative max-[650px]:top-[-200px]">
             {sections.map((section) => (
 
 

@@ -1,6 +1,6 @@
 "use client"
 
-export default function Hero({ isAtTop }: { isAtTop: boolean }) {
+export default function Hero({ isAtTop, scrollToServices }: { isAtTop: boolean, scrollToServices: () => void }) {
     return (
         <section 
             className={`w-full h-[700px] bg-cover bg-center flex flex-col justify-center max-[650px]:top-[-30px] pl-[7%] relative gap-[40px] top-[80px] ${isAtTop ? 'top-[155px]' : 'top-0'}`}
@@ -18,10 +18,11 @@ export default function Hero({ isAtTop }: { isAtTop: boolean }) {
                     Skyline Estimator provides better solution, accurate takeoffs and estimating. We offer unmatched professional takeoff and estimating services, cost verification, expert witness services, and more.
                 </p>
                 <div className="flex gap-4">
-                    <button className="bg-dark-blue text-white px-8 py-[10px] rounded-md cursor-pointer text-sm">Our services</button>
+                    <button onClick={scrollToServices} className="bg-dark-blue text-white px-8 py-[10px] rounded-md cursor-pointer text-sm">Our services</button>
                     <button className="bg-accent text-white px-8 py-[10px] rounded-md cursor-pointer text-sm">About us</button>
                 </div>
             </div>
+
         </section>
     );
 }
