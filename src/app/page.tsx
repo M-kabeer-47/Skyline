@@ -28,7 +28,7 @@ export default function Home() {
        />
        <div className="bg-light-gray min-h-fit">
        <CircularEstimations />
-       <TurnaroundTime />
+       <TurnaroundTime page="home" />
        <Stats />
        <Services />
        <Accordions />

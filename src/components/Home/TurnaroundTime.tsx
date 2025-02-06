@@ -35,7 +35,7 @@ const features = [
     }
 ]
 
-export default function TurnaroundTime({page="home"}: {page?: string}) {
+export default function TurnaroundTime({page}: {page?: string}) {
     return (
         <div className={`w-full px-[6%] max-[1065px]:px-[3%] py-16 bg-light-gray mt-[100px]`}>
             {/* Header */}
