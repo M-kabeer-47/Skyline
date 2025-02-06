@@ -1,8 +1,10 @@
 "use client"
-
+import { useRouter } from "next/navigation";
 export default function Hero({ isAtTop, scrollToServices }: { isAtTop: boolean, scrollToServices: () => void }) {
+    const router = useRouter();
     return (
         <section 
+
             className={`w-full h-[700px] bg-cover bg-center flex flex-col justify-center max-[650px]:top-[-30px] pl-[7%] relative gap-[40px] top-[80px] ${isAtTop ? 'top-[155px]' : 'top-0'}`}
             style={{ backgroundImage: "url('/backgrounds/bg-cover.jpg')"}}
         >
@@ -19,9 +21,12 @@ export default function Hero({ isAtTop, scrollToServices }: { isAtTop: boolean, 
                 </p>
                 <div className="flex gap-4">
                     <button onClick={scrollToServices} className="bg-dark-blue text-white px-8 py-[10px] rounded-md cursor-pointer text-sm">Our services</button>
-                    <button className="bg-accent text-white px-8 py-[10px] rounded-md cursor-pointer text-sm">About us</button>
+                    <button className="bg-accent text-white px-8 py-[10px] rounded-md cursor-pointer text-sm" onClick={() => {
+                        router.push('/about-us')
+                    }}>About us</button>
                 </div>
             </div>
+
 
         </section>
     );

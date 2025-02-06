@@ -34,7 +34,7 @@ const tools = [
 
 export default function ConstructionEstimatingConsultants() {
   return (
-    <div className="px-[4%] lg:px-[10%] pb-[200px] sm:pb-[300px]">
+    <div className="px-[4%] lg:px-[10%] pb-[100px] sm:pb-[200px]">
       <BlueDiv>
         <p className="text-white text-md text-center leading-8 px-[2%]">
           Welcome to our construction estimating consultant services page. We

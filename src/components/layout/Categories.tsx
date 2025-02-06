@@ -69,7 +69,7 @@ import {  usePathname, useRouter } from "next/navigation";
                 key={service}
                 className="w-full justify-start bg-accent hover:bg-[#6ec1e4] text-white py-[30px] rounded-[0px] flex items-center justify-center"
               onClick={() => {
-                alert(service.toLowerCase().replace(" ", "-"))
+                
                 router.push(`/${service.replace(" ", "-").toLowerCase()}`)
               }}
               >
